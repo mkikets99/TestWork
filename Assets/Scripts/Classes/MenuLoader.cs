@@ -28,6 +28,7 @@ public class MenuLoader : MonoBehaviour
         menu.transform.SetParent(printer.transform);
         RectTransform rt = menu.GetComponent<RectTransform>();
         ScrollRect sr = menu.GetComponent<ScrollRect>();
+        
         sr.horizontal = false;
         sr.vertical = false;
         sr.verticalScrollbar.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 0);
@@ -65,7 +66,7 @@ public class MenuLoader : MonoBehaviour
     public void Refresh()
     {
         ScrollRect sr = menu.GetComponent<ScrollRect>();
-        sr.vertical = true;
+        //sr.vertical = true;
         sr.verticalScrollbar.GetComponent<RectTransform>().sizeDelta = new Vector2(10, 0);
     }
 }
